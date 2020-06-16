@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='InlineComment',
             fields=[
-                ('cmsplugin_ptr', models.OneToOneField(parent_link=True, related_name='djangocms_inline_comment_inlinecomment', auto_created=True, primary_key=True, serialize=False, to='cms.CMSPlugin')),
+                ('cmsplugin_ptr', models.OneToOneField(parent_link=True, related_name='djangocms_inline_comment_inlinecomment', auto_created=True, primary_key=True, serialize=False, to='cms.CMSPlugin', on_delete=models.CASCADE)),
                 ('body', djangocms_text_ckeditor.fields.HTMLField(null=True, verbose_name='Comment', blank=True)),
             ],
             options={
